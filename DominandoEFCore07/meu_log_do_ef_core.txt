@@ -1,0 +1,134 @@
+dbug: 07/05/2024 10:45:55.815 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 8.0.4 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.4' with options: None
+dbug: 07/05/2024 10:45:55.954 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Departamento>()
+          .Where(d => d.Id > 0)'
+dbug: 07/05/2024 10:45:56.191 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Departamento>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.QueryExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Departamento.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Departamento.Ativo (bool) Required, 1], [Property: Departamento.Descricao (string), 2], [Property: Departamento.Excluido (bool) Required, 3] }
+              SELECT d.Id, d.Ativo, d.Descricao, d.Excluido
+              FROM Departamentos AS d
+              WHERE d.Id > 0), 
+          null, 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Departamento>, 
+          DominandoEFCore07.Data.ApplicationDbContext, 
+          False, 
+          False, 
+          True
+      )'
+dbug: 07/05/2024 10:45:56.224 RelationalEventId.ConnectionCreating[20005] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Creating DbConnection.
+dbug: 07/05/2024 10:45:56.257 RelationalEventId.ConnectionCreated[20006] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Created DbConnection. (32ms).
+dbug: 07/05/2024 10:45:56.259 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'EFCore05a06' on server '(localdb)\mssqllocaldb'.
+dbug: 07/05/2024 10:45:56.839 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'EFCore05a06' on server '(localdb)\mssqllocaldb'.
+dbug: 07/05/2024 10:45:56.844 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 07/05/2024 10:45:56.851 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (6ms).
+dbug: 07/05/2024 10:45:56.854 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Initialized DbCommand for 'ExecuteReader' (12ms).
+dbug: 07/05/2024 10:45:56.859 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [d].[Id], [d].[Ativo], [d].[Descricao], [d].[Excluido]
+      FROM [Departamentos] AS [d]
+      WHERE [d].[Id] > 0
+info: 07/05/2024 10:45:56.890 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [d].[Id], [d].[Ativo], [d].[Descricao], [d].[Excluido]
+      FROM [Departamentos] AS [d]
+      WHERE [d].[Id] > 0
+dbug: 07/05/2024 10:45:56.949 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationDbContext' started tracking 'Departamento' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 07/05/2024 10:45:56.970 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationDbContext' started tracking 'Departamento' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 07/05/2024 10:45:56.970 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationDbContext' started tracking 'Departamento' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 07/05/2024 10:45:56.972 RelationalEventId.DataReaderClosing[20301] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Closing data reader to 'EFCore05a06' on server '(localdb)\mssqllocaldb'.
+dbug: 07/05/2024 10:45:56.978 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader for 'EFCore05a06' on server '(localdb)\mssqllocaldb' is being disposed after spending 84ms reading results.
+dbug: 07/05/2024 10:45:56.979 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'EFCore05a06' on server '(localdb)\mssqllocaldb'.
+dbug: 07/05/2024 10:45:56.987 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'EFCore05a06' on server '(localdb)\mssqllocaldb' (7ms).
+dbug: 07/05/2024 10:45:56.989 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'ApplicationDbContext' disposed.
+dbug: 07/05/2024 10:45:56.991 RelationalEventId.ConnectionDisposing[20007] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Disposing connection to database 'EFCore05a06' on server '(localdb)\mssqllocaldb'.
+dbug: 07/05/2024 10:45:56.992 RelationalEventId.ConnectionDisposed[20008] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Disposed connection to database '' on server '' (1ms).
+dbug: 07/05/2024 10:46:10.740 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 8.0.4 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.4' with options: None
+dbug: 07/05/2024 10:46:10.853 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Departamento>()
+          .Where(d => d.Id > 0)'
+dbug: 07/05/2024 10:46:11.035 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Departamento>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.QueryExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Departamento.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Departamento.Ativo (bool) Required, 1], [Property: Departamento.Descricao (string), 2], [Property: Departamento.Excluido (bool) Required, 3] }
+              SELECT d.Id, d.Ativo, d.Descricao, d.Excluido
+              FROM Departamentos AS d
+              WHERE d.Id > 0), 
+          null, 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Departamento>, 
+          DominandoEFCore07.Data.ApplicationDbContext, 
+          False, 
+          False, 
+          True
+      )'
+dbug: 07/05/2024 10:46:11.061 RelationalEventId.ConnectionCreating[20005] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Creating DbConnection.
+dbug: 07/05/2024 10:46:11.082 RelationalEventId.ConnectionCreated[20006] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Created DbConnection. (19ms).
+dbug: 07/05/2024 10:46:11.085 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'EFCore05a06' on server '(localdb)\mssqllocaldb'.
+dbug: 07/05/2024 10:46:11.509 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'EFCore05a06' on server '(localdb)\mssqllocaldb'.
+dbug: 07/05/2024 10:46:11.513 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 07/05/2024 10:46:11.517 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (4ms).
+dbug: 07/05/2024 10:46:11.518 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Initialized DbCommand for 'ExecuteReader' (7ms).
+dbug: 07/05/2024 10:46:11.522 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [d].[Id], [d].[Ativo], [d].[Descricao], [d].[Excluido]
+      FROM [Departamentos] AS [d]
+      WHERE [d].[Id] > 0
+info: 07/05/2024 10:46:11.581 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (56ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [d].[Id], [d].[Ativo], [d].[Descricao], [d].[Excluido]
+      FROM [Departamentos] AS [d]
+      WHERE [d].[Id] > 0
+dbug: 07/05/2024 10:46:11.614 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationDbContext' started tracking 'Departamento' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 07/05/2024 10:46:11.631 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationDbContext' started tracking 'Departamento' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 07/05/2024 10:46:11.631 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationDbContext' started tracking 'Departamento' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 07/05/2024 10:46:11.634 RelationalEventId.DataReaderClosing[20301] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Closing data reader to 'EFCore05a06' on server '(localdb)\mssqllocaldb'.
+dbug: 07/05/2024 10:46:11.639 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader for 'EFCore05a06' on server '(localdb)\mssqllocaldb' is being disposed after spending 54ms reading results.
+dbug: 07/05/2024 10:46:11.641 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'EFCore05a06' on server '(localdb)\mssqllocaldb'.
+dbug: 07/05/2024 10:46:11.646 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'EFCore05a06' on server '(localdb)\mssqllocaldb' (4ms).
+dbug: 07/05/2024 10:46:11.647 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'ApplicationDbContext' disposed.
+dbug: 07/05/2024 10:46:11.649 RelationalEventId.ConnectionDisposing[20007] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Disposing connection to database 'EFCore05a06' on server '(localdb)\mssqllocaldb'.
+dbug: 07/05/2024 10:46:11.650 RelationalEventId.ConnectionDisposed[20008] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Disposed connection to database '' on server '' (0ms).

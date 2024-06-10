@@ -1,0 +1,6 @@
+@DominandoEFCore18_HostAddress = http://localhost:5038
+
+GET {{DominandoEFCore18_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
